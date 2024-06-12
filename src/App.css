@@ -1,11 +1,11 @@
 .light {
-  --primary-color: #333;
+  --primary-color: #000000;
   --secondary-color: #666;
   --background-color: #fff;
 }
 
 .dark {
-  --primary-color: #ccc;
+  --primary-color: #000000;
   --secondary-color: #999;
   --background-color: #000;
 }
