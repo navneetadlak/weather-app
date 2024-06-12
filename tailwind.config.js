@@ -10,13 +10,11 @@ module.exports = {
           'primary': '#333',
           'secondary': '#666',
           'background': '#fff',
-          // Add more colors as needed
         },
         'dark': {
           'primary': '#ccc',
           'secondary': '#999',
           'background': '#000',
-          // Add more colors as needed
         },
       },
     },
