@@ -8,7 +8,7 @@ const Weather = () => {
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
   let date = new Date().toLocaleDateString("de-DE");
-  const {theme, toggleTheme} = useContext(ThemeContext);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   const fetchWeather = async () => {
     try {
@@ -25,16 +25,21 @@ const Weather = () => {
   };
 
   return (
-    
-   
-    <div className={`min-h-screen flex flex-col items-center justify-center  ${theme === 'dark' ? 'dark' : ''}`}>     
-     <button className="mb-16 bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 border border-blue-700 rounded" onClick={toggleTheme}>
+    <div
+      className={`min-h-screen flex flex-col items-center justify-center  ${
+        theme === "dark" ? "dark" : ""
+      }`}
+    >
+      <button
+        className="mb-16 bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 border border-blue-700 rounded"
+        onClick={toggleTheme}
+      >
         Change theme
       </button>
-    <h1 className="mb-6 text-center text-3xl font-semibold text-black-500">
+      <h1 className="mb-6 text-center text-3xl font-semibold text-black-500">
         Weather App
       </h1>
-    
+
       <div id="weather-form" className="relative mb-6">
         <label htmlFor="city" className="mb-2 block font-medium text-blue-700">
           {" "}
@@ -86,18 +91,22 @@ const Weather = () => {
                 {Math.floor(weather.main.temp - 273.15)}°C
               </div>
               <div className="flex flex-col items-center ml-6">
-                <div>{(weather.weather[0].description)}</div>
+                <div>{weather.weather[0].description}</div>
                 <div className="mt-1">
                   <span className="text-sm">
                     <i className="far fa-long-arrow-up"></i>
                   </span>
-                  <span className="text-sm font-light text-gray-500">{Math.floor(weather.main.temp_max - 273.15)}°C</span>
+                  <span className="text-sm font-light text-gray-500">
+                    {Math.floor(weather.main.temp_max - 273.15)}°C
+                  </span>
                 </div>
                 <div>
                   <span className="text-sm">
                     <i className="far fa-long-arrow-down"></i>
                   </span>
-                  <span className="text-sm font-light text-gray-500">{Math.floor(weather.main.temp_min - 273.15)}°C</span>
+                  <span className="text-sm font-light text-gray-500">
+                    {Math.floor(weather.main.temp_min - 273.15)}°C
+                  </span>
                 </div>
               </div>
             </div>
